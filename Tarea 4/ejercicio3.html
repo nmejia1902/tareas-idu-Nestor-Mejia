@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Propiedades ARIA</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.5; padding: 20px; }
+    .form-section { max-width: 400px; }
+    .checkbox {
+      display: flex; align-items: center; gap: 8px; cursor: pointer;
+    }
+    .checkbox span {
+      display: inline-block; width: 20px; height: 20px; border: 2px solid #444;
+    }
+    .checkbox[aria-checked="true"] span {
+      background-color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Formulario con propiedades ARIA</h1>
+
+  <form class="form-section" action="#" method="post">
+    <label for="usuario">Usuario:</label><br>
+    <input type="text" id="usuario" name="usuario" value="Juan Pérez" aria-readonly="true" readonly><br><br>
+    <label for="email">Correo electronico:</label><br>
+    <input type="email" id="email" name="email" aria-required="true" required><br><br>
+    <div id="suscripcion" role="checkbox" aria-checked="false" tabindex="0" class="checkbox">
+      <span></span>
+      <label for="suscripcion" style="cursor:pointer;">Suscribirme al boletin</label>
+    </div><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+
+    const checkbox = document.getElementById('suscripcion');
+    checkbox.addEventListener('click', () => {
+      const checked = checkbox.getAttribute('aria-checked') === 'true';
+      checkbox.setAttribute('aria-checked', String(!checked));
+    });
+    checkbox.addEventListener('keydown', (e) => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        checkbox.click();
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo con roles ARIA</title>
+  <style>
+    .tabs button {
+      padding: 8px 12px;
+      border: none;
+      background: #eee;
+      cursor: pointer;
+    }
+    .tabs button[aria-selected="true"] {
+      background: #ccc;
+      font-weight: bold;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #999;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tabs" role="tablist" aria-label="Secciones de información">
+    <button id="tab1" role="tab" aria-selected="true" aria-controls="panel1">Productos</button>
+    <button id="tab2" role="tab" aria-selected="false" aria-controls="panel2">Estadísticas</button>
+  </div>
+
+  <div id="panel1" role="tabpanel" aria-labelledby="tab1">
+    <h2>Lista de productos</h2>
+    <table role="table" aria-label="Tabla de productos disponibles">
+      <thead>
+        <tr>
+          <th scope="col">Producto</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Teclado</td>
+          <td>Lps 25</td>
+          <td>Disponible</td>
+        </tr>
+        <tr>
+          <td>Ratón inalámbrico</td>
+          <td>Lps 15</td>
+          <td>Agotado</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="panel2" role="tabpanel" aria-labelledby="tab2" hidden>
+    <h2>Estadísticas de ventas</h2>
+
+    <div role="img" aria-label="Gráfico de barras que muestra las ventas mensuales de enero a marzo">
+      <img src="grafico-ventas.png" alt="" width="400" height="200">
+    </div>
+  </div>
+
+  <script>
+
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const panels = document.querySelectorAll('[role="tabpanel"]');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+
+        tabs.forEach(t => t.setAttribute('aria-selected', t === tab));
+
+        panels.forEach(p => {
+          p.hidden = p.getAttribute('aria-labelledby') !== tab.id;
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

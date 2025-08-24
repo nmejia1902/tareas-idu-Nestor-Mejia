@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Accesibilidad Web - Interfaz del Usuario</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.5; }
+        header, footer, section { padding: 20px; }
+        header { background-color: lightblue; }
+        h1 { font-size: 2rem; }
+        .highlight { background-color: lightgray; padding: 10px; }
+        img { max-width: 100%; height: auto; }
+        .btn { background-color: orange; padding: 10px; color: #000; border: none; cursor: pointer; }
+        .btn:hover { background-color: darkorange; }
+        .primary-btn { background-color: blue; color: white; }
+        a { color: #0645AD; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Guía de Accesibilidad Web</h1>
+</header>
+
+<main>
+    <section>
+        <img src="https://addaw.org//cdn/admin/assets/images/galeria/SRypBs4xEP7LUMVzbO1o.jpg" 
+             alt="Icono representando accesibilidad visual" width="150" height="150">
+        <p>Accesibilidad visual en sitios web.</p>
+    </section>
+
+    <section>
+        <h2>Introducción a la Accesibilidad Web</h2>
+        <p>En esta página aprenderás conceptos básicos sobre cómo mejorar la accesibilidad de tus sitios web.</p>
+    </section>
+
+    <section class="highlight">
+        <p><strong>Guía completa:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Leer guía de Accesibilidad en MDN</a></p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Más recursos sobre accesibilidad en MDN</a></p>
+    </section>
+
+    <section>
+        <h2>Formulario de Contacto sobre Accesibilidad Web</h2>
+        <form>
+            <label for="nombre">Nombre:</label><br>
+            <input id="nombre" type="text" name="nombre"><br><br>
+
+            <label for="correo">Correo Electrónico:</label><br>
+            <input id="correo" type="email" name="correo"><br><br>
+
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje"></textarea><br><br>
+
+            <button type="submit" class="btn primary-btn">Enviar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Herramientas de Accesibilidad</h2>
+        <div>
+            <figure>
+                <img src="https://addaw.org//cdn/admin/assets/images/galeria/SRypBs4xEP7LUMVzbO1o.jpg" alt="Icono de lector de pantalla" width="100" height="100">
+                <figcaption>Lector de Pantalla</figcaption>
+            </figure>
+            <button class="btn">Descargar</button>
+        </div>
+
+        <div>
+            <figure>
+                <img src="https://addaw.org//cdn/admin/assets/images/galeria/SRypBs4xEP7LUMVzbO1o.jpg" alt="Icono de comprobador de contraste" width="100" height="100">
+                <figcaption>Contrast Checker</figcaption>
+            </figure>
+            <button class="btn">Descargar</button>
+        </div>
+
+        <div>
+            <figure>
+                <img src="https://addaw.org//cdn/admin/assets/images/galeria/SRypBs4xEP7LUMVzbO1o.jpg" alt="Icono de validador WCAG" width="100" height="100">
+                <figcaption>Validador WCAG</figcaption>
+            </figure>
+            <button class="btn">Descargar</button>
+        </div>
+    </section>
+</main>
+
+<footer style="background-color: #333; color: white;">
+    <p>© 2024 Accesibilidad Web - Interfaz del Usuario</p>
+    <p>Promoviendo la inclusión digital</p>
+    <nav>
+        <a href="https://accesibilidad.com/privacidad" style="color: white;">Política de Privacidad</a> | 
+        <a href="https://accesibilidad.com/terminos" style="color: white;">Términos y Condiciones</a>
+    </nav>
+</footer>
+
+</body>
+</html>
+
+
+
