@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejercicios 1,2,3,4,5,6 BEM + Flexbox</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+     /* Ejercicio 1 */
+    .list {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 10px;
+      width: min(100px, 95vw);
+      margin: auto;
+    }
+    .list__item {
+      background: #ffe484;
+      border: 1px solid #d7b442;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+    }
+    
+ /*Ejercicio 2*/
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; 
+  margin: 2rem 0;
+}
+
+.layout__row {
+  display: flex;
+  gap: 1rem;
+}
+
+.layout__item {
+  background: #eee;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.layout__row--top {
+  justify-content: center;
+  gap: 4rem;
+}
+
+.layout__row--bottom {
+  justify-content: space-around;
+}
+
+/*Ejercicio 3 */
+
+.layout {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.layout__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.layout__item {
+  flex: 1;
+  height: 50px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+
+ /* Ejercicio 4 */
+
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin: 10px; 
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px; 
+    margin: 10px; 
+    font-size: 24px; 
+    color: #555; 
+}
+
+.box--1 {
+    background-color: #f9c74f; 
+}
+
+.box--2 {
+    background-color: #f94144;
+}
+
+.box--3 {
+    background-color: #43aa8b;
+}
+
+.box--4 {
+    background-color: #90be6d; 
+    width: 120px; 
+}
+
+.box--5 {
+    background-color: #577590; 
+}
+
+/* Ejercicio 5 */
+.match {
+  background: #ffeb99;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.match__box {
+  background: #5dade2;
+  color: #fff;
+  font-weight: bold;
+  padding: 0px;
+  border-radius: 6px;
+  min-width: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.match__box--h1 { height: 60px; }
+.match__box--h2 { height: 120px; }
+.match__box--h3 { height: 90px; }
+.match__box--h4 { height: 80px; }
+
+
+    /* Ejercicio 6 */
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .product-card {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .product-card__image {
+      background: #eef;
+      height: 120px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #555;
+    }
+    .product-card__name {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    .product-card__details {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .product-card__price {
+      color: #e74c3c;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .product-card__button {
+      background: #3498db;
+      color: white;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .product-card__button:hover {
+      background: #2c80b4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ejercicio 1 -->
+  <section class="list">
+    <div class="list__item">item 1</div>
+    <div class="list__item">item 2</div>
+    <div class="list__item">item 3</div>
+    <div class="list__item">item 4</div>
+  </section>
+
+
+<!-- Ejercicio 2 -->
+<section class="layout">
+  <div class="layout__row layout__row--top">
+    <div class="layout__item">Item 4</div>
+    <div class="layout__item">Item 5</div>
+  </div>
+
+  <div class="layout__row layout__row--bottom">
+    <div class="layout__item">Item 1</div>
+    <div class="layout__item">Item 2</div>
+    <div class="layout__item">Item 3</div>
+  </div>
+</section>
+
+
+<!-- Ejercicio3 -->
+<div class="layout">
+  <div class="layout__row">
+    <div class="layout__item">Item 5</div>
+    <div class="layout__item">Item 4</div>
+  </div>
+  <div class="layout__row">
+    <div class="layout__item">Item 3</div>
+    <div class="layout__item">Item 2</div>
+    <div class="layout__item">Item 1</div>
+  </div>
+</div>
+
+
+  <!-- Ejercicio 4 -->
+<section class="layout"> 
+    <div class="container">
+        <div class="box box--1">1</div>
+        <div class="box box--2">2</div>
+        <div class="box box--3">3</div>
+        <div class="box box--4">4</div>
+        <div class="box box--5">5</div>
+    </div>
+</section>
+
+
+<!-- Ejercicio 5 -->
+<section class="match">
+  <div class="match__box match__box--h1">1</div>
+  <div class="match__box match__box--h2">2</div>
+  <div class="match__box match__box--h3">3</div>
+  <div class="match__box match__box--h4">4</div>
+</section>
+
+
+  <!-- Ejercicio 6 -->
+<section class="products">
+  <div class="product-card">
+    <img src="https://lacolonia.vtexassets.com/arquivos/ids/246123-800-800?v=638424060436000000&width=800&height=800&aspect=true">
+    <div class="product-card__name">REGIA Mayonesa 3500g</div>
+    <div class="product-card__details">3500g</div>
+    <div class="product-card__price">L 269.99</div>
+    <button class="product-card__button">→</button>
+  </div>
+  <div class="product-card">
+    <img src="https://lacolonia.vtexassets.com/arquivos/ids/246123-800-800?v=638424060436000000&width=800&height=800&aspect=true">
+    <div class="product-card__name">REGIA Macaroni 200g</div>
+    <div class="product-card__details">200g</div>
+    <div class="product-card__price">L 21.99</div>
+    <button class="product-card__button">→</button>
+  </div>
+  <div class="product-card">
+   <img src="https://lacolonia.vtexassets.com/arquivos/ids/246123-800-800?v=638424060436000000&width=800&height=800&aspect=true">
+    <div class="product-card__name">REGIA Intestino 400g</div>
+    <div class="product-card__details">400g</div>
+    <div class="product-card__price">L 32.99</div>
+    <button class="product-card__button">→</button>
+  </div>
+  <div class="product-card">
+    <img src="https://m.media-amazon.com/images/I/21NcLqW5c+L._UF894,1000_QL80_.jpg" width="200">
+    <div class="product-card__name">ROLAND Dijon Mustard Provencal 7oz</div>
+    <div class="product-card__details">7oz</div>
+    <div class="product-card__price">L 121.99</div>
+    <button class="product-card__button">→</button>
+  </div>
+  <div class="product-card">
+    <img src="https://www.gourmetfoodworld.com/images/Product/large/roland-dijon-mustard-1S-846.jpg">
+    <div class="product-card__name">WISH-BONE Italian 15oz</div>
+    <div class="product-card__details">15oz</div>
+    <div class="product-card__price">L 99.99</div>
+    <button class="product-card__button">→</button>
+  </div>
+  <div class="product-card">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/61Qr1QbZgqL._AC_UL600_SR600,600_.jpg">
+    <div class="product-card__name">WISH-BONE Italian 237ml</div>
+    <div class="product-card__details">237ml</div>
+    <div class="product-card__price">L 81.99</div>
+    <button class="product-card__button">→</button>
+  </div>
+  <div class="product-card">
+    <img src="https://superbaru.com/cdn/shop/files/000041321005756_a63e3e1f-2856-462a-8373-37af5022059e.jpg?v=1750430519&width=533">
+    <div class="product-card__name">WISH-BONE Ranch 444ml</div>
+    <div class="product-card__details">444ml</div>
+    <div class="product-card__price">L 99.99</div>
+    <button class="product-card__button">→</button>
+  </div>
+  <div class="product-card">
+    <img src="https://i5.walmartimages.com/seo/Wish-Bone-Thousand-Island-Salad-Dressing-15-fl-oz-Pack-of-2_9fbefe07-6ac5-4d79-8e93-35eabe1afbe6.9871a96c57716508391b7e1679f6dbee.jpeg?odnHeight=264&odnWidth=264&odnBg=FFFFFF">
+    <div class="product-card__name">WISH-BONE Ranch Dressing 15oz</div>
+    <div class="product-card__details">15oz</div>
+    <div class="product-card__price">L 81.99</div>
+    <button class="product-card__button">→</button>
+  </div>
+</section>
+
+
+</body>
+</html>
