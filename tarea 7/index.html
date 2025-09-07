@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarea Tailwind</title>
+</head>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="JS/tailwind.config.js"></script>
+
+<body class="bg-gray-50 p-8 space-y-8">
+  <button class="bg-brand-400 text-black px-4 py-2 rounded min-w-custom-min-w hover:opacity-20 transition">
+    Boton Brand
+  </button>
+  <div class="bg-blue-300 w-72 h-20 flex items-center justify-center rounded">
+    Div con w-72
+  </div>
+  <div class="p-4 text-white rounded 
+              bg-red-400
+              xs:bg-green-400
+              sm:bg-yellow-400
+              md:bg-blue-400
+              lg:bg-purple-400
+              2xl:bg-pink-500">
+    Cambia de color según el tamaño de pantalla
+  </div>
+  <div class="bg-teal-400 w-custom-w h-20 flex items-center justify-center text-white rounded">
+    Caja con w-custom-w (36rem)
+  </div>
+  <button class="bg-pink-600 text-white px-4 py-2 rounded min-w-custom-min-w">
+    Texto largo que expande el botón automáticamente: Lorem Ipsum
+"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." 
+  </button>
+  <div class="bg-gray-200 min-h-custom-min-h flex items-center justify-center rounded">
+    Contenedor con altura mínima
+  </div>
+  <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+    <div class="bg-blue-500 h-20 rounded"></div>
+    <div class="bg-green-500 h-20 rounded"></div>
+    <div class="bg-red-500 h-20 rounded"></div>
+    <div class="bg-yellow-500 h-20 rounded"></div>
+    <div class="bg-purple-500 h-20 rounded"></div>
+    <div class="bg-pink-500 h-20 rounded"></div>
+    <div class="bg-teal-500 h-20 rounded"></div>
+    <div class="bg-orange-500 h-20 rounded"></div>
+  </div>
+</body>
+</html>
