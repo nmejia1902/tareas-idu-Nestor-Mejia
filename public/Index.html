@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortaleza de San Fernando de Omoa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-primary': '#8B6B4C',
+                        'custom-secondary': '#D7C0A9',
+                        'custom-accent': '#A52A2A',
+                        'custom-light': '#F5F5DC',
+                        'custom-dark': '#4E3524',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/ProyectoIDU/Assets/CSS/main.css">
+</head>
+<body class="bg-custom-light text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <nav class="bg-white shadow-md dark:bg-gray-800 fixed w-full z-20 top-0 left-0">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-custom-primary">Fortaleza San Fernando de Omoa</a>
+                </div>
+                
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-custom-primary dark:text-gray-300 dark:hover:text-white">Inicio</a>
+                    <a href="#actividades" class="text-gray-700 hover:text-custom-primary dark:text-gray-300 dark:hover:text-white">Actividades</a>
+                    <a href="#galeria" class="text-gray-700 hover:text-custom-primary dark:text-gray-300 dark:hover:text-white">Galería</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-custom-primary dark:text-gray-300 dark:hover:text-white">Contacto</a>
+                </div>
+                
+
+                <div class="flex items-center">
+                    <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700">
+                        <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                    </button>
+                    
+
+                    <button id="mobileMenuButton" class="md:hidden ml-4">
+                        <i class="fas fa-bars text-2xl text-gray-700 dark:text-gray-300"></i>
+                    </button>
+                </div>
+            </div>
+            
+
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="#inicio" class="block py-2 text-gray-700 hover:text-custom-primary dark:text-gray-300 dark:hover:text-white">Inicio</a>
+                <a href="#actividades" class="block py-2 text-gray-700 hover:text-custom-primary dark:text-gray-300 dark:hover:text-white">Actividades</a>
+                <a href="#galeria" class="block py-2 text-gray-700 hover:text-custom-primary dark:text-gray-300 dark:hover:text-white">Galería</a>
+                <a href="#contacto" class="block py-2 text-gray-700 hover:text-custom-primary dark:text-gray-300 dark:hover:text-white">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="inicio" class="video-banner">
+        <video autoplay muted loop playsinline>
+            <source src="/ProyectoIDU/Assets/IMG/Fortaleza_Video.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div class="video-overlay">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Fortaleza San fernando de Omoa</h1>
+            <p class="text-xl md:text-2xl mb-8">"Una joya colonial del siglo XVIII en las costas de Honduras"</p>
+            <a href="#actividades" class="bg-custom-primary hover:bg-custom-accent text-white font-bold py-3 px-6 rounded-lg transition duration-300 z-10">Descubrir más</a>
+        </div>
+    </section>
+
+
+    <div class="bg-gray-100 dark:bg-gray-700 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm">
+                <ol class="list-reset flex">
+                    <li><a href="#inicio" class="text-custom-primary hover:text-custom-accent">Inicio</a></li>
+                    <li><span class="mx-2 text-gray-500">/</span></li>
+                    <li class="text-gray-500"> Video Fortaleza San Fernando de Omoa</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+
+    <section id="actividades" class="py-16 px-4 bg-white dark:bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Actividades en la Fortaleza</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-custom-secondary rounded-lg overflow-hidden shadow-lg card-hover">
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-history text-4xl text-custom-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Recorrido Histórico</h3>
+                        <p class="text-gray-700 dark:text-gray-300">Explora la rica historia de esta fortaleza colonial española construida en el siglo XVIII.</p>
+                    </div>
+                </div>
+                
+
+                <div class="bg-custom-secondary rounded-lg overflow-hidden shadow-lg card-hover">
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-camera text-4xl text-custom-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Tour Fotográfico</h3>
+                        <p class="text-gray-700 dark:text-gray-300">Captura la belleza arquitectónica y los paisajes espectaculares que rodean la fortaleza.</p>
+                    </div>
+                </div>
+                
+
+                <div class="bg-custom-secondary rounded-lg overflow-hidden shadow-lg card-hover">
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-ship text-4xl text-custom-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Vistas al Mar Caribe</h3>
+                        <p class="text-gray-700 dark:text-gray-300">Disfruta de las espectaculares vistas al mar Caribe desde las murallas de la fortaleza.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="mt-16 bg-custom-light dark:bg-gray-700 p-8 rounded-lg">
+                <h3 class="text-2xl font-bold mb-4">Historia de la Fortaleza</h3>
+                <p class="mb-4">La Fortaleza de San Fernando de Omoa es una impresionante estructura colonial española construida entre 1759 y 1775 para proteger la costa caribeña de Honduras de los piratas y potencias extranjeras.</p>
+                <p>Es una de las fortalezas más grandes de América Central y representa un importante legado histórico y cultural de Honduras. Durante su historia, fue atacada por piratas, utilizada como prisión y hoy en día es un importante destino turístico.</p>
+                <p>Datos relevantes</p>
+                <p>✨ Construida por los españoles entre 1752 y 1775.</p>
+                <p>✨ Su propósito era proteger la bahía de Omoa contra ataques piratas e invasiones.</p>
+                <p>✨ Es la fortaleza colonial más grande de Centroamérica.</p>
+                <p>✨ Conserva muros de piedra, cañones originales y vistas impresionantes al mar Caribe.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="galeria" class="py-16 px-4 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Galería de Imágenes</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+                <div class="gallery-item cursor-pointer">
+                    <img src="/ProyectoIDU/Assets/IMG/Fortaleza1.jpg" alt="Vista exterior de la fortaleza" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </div>
+                
+                <div class="gallery-item cursor-pointer">
+                    <img src="/ProyectoIDU/Assets/IMG/Fortaleza3.jpg" alt="Murallas de la fortaleza" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </div>
+                
+                <div class="gallery-item cursor-pointer">
+                    <img src="/ProyectoIDU/Assets/IMG/Fortaleza7.jpg" alt="Vista desde el interior" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </div>
+                
+                <div class="gallery-item cursor-pointer">
+                    <img src="/ProyectoIDU/Assets/IMG/tren1.jpg" alt="Cañones históricos" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </div>
+                
+                <div class="gallery-item cursor-pointer">
+                    <img src="/ProyectoIDU/Assets/IMG/turista.jpg" alt="Patio interior" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </div>
+                
+                <div class="gallery-item cursor-pointer">
+                    <img src="/ProyectoIDU/Assets/IMG/turista2.jpg" alt="Vista al mar desde la fortaleza" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+        <span id="closeModal" class="absolute top-6 right-8 text-white text-4xl cursor-pointer">&times;</span>
+        <img id="modalImage" class="max-w-3xl max-h-[80vh] rounded-lg shadow-lg" src="" alt="">
+    </div>
+
+    <section id="contacto" class="py-16 px-4 bg-white dark:bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Contacto</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Nombre</label>
+                            <input type="text" id="name" placeholder="Ej: Juan Pérez" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                            <input type="email" id="email" placeholder="Ej: tucorreo@dominio.com" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Asunto</label>
+                            <input type="text" id="subject" placeholder="Ej: solicitud de evento" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" required>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Mensaje</label>
+                            <textarea id="message" rows="4"  placeholder="Ej: tu mensaje" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-custom-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-custom-primary hover:bg-custom-accent text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full">Enviar mensaje</button>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mb-6">
+                        <div class="aspect-w-16 aspect-h-9">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4098.760819431301!2d-88.04152189569258!3d15.779046966291878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f67ad321c29f707%3A0x2d5b2e5f6f536dea!2sFortaleza%20de%20San%20Fernando!5e1!3m2!1ses!2shn!4v1757896452588!5m2!1ses!2shn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-custom-primary mt-1 mr-4"></i>
+                            <p>Omoa, Departamento de Cortés, Honduras</p>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-custom-primary mr-4"></i>
+                            <p>+504 2658-9167</p>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-custom-primary mr-4"></i>
+                            <p>info@ihah.hn</p>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-custom-primary mr-4"></i>
+                            <p>Abierto de 8:00 AM a 4:00 PM, de martes a domingo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-custom-dark text-white py-12 px-4 dark:bg-gray-900">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Fortaleza San Fernando de Omoa</h3>
+                    <p>Una joya histórica y cultural de Honduras que debe ser visitada por todos aquellos interesados en la historia colonial y la belleza caribeña.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="hover:text-custom-primary transition duration-300">Inicio</a></li>
+                        <li><a href="#actividades" class="hover:text-custom-primary transition duration-300">Actividades</a></li>
+                        <li><a href="#galeria" class="hover:text-custom-primary transition duration-300">Galería</a></li>
+                        <li><a href="#contacto" class="hover:text-custom-primary transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-custom-primary transition duration-300">
+                            <i class="fab fa-facebook-f text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-custom-primary transition duration-300">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-custom-primary transition duration-300">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-custom-primary transition duration-300">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2025  Proyecto Clase : Interfaz de usuario |  "Developed by @nmejia1902 ".</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-custom-primary text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+<script src="/ProyectoIDU/Assets/JS/index.js"></script>
+</body>
+</html>
